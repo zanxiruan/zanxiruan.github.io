@@ -78,6 +78,7 @@ nav a:hover { background: #f1f2f6; color: var(--primary); }
 .pub-info h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; color: #111; line-height: 1.3; }
 .pub-authors { font-size: 14px; color: #555; margin-bottom: 5px; }
 .pub-authors strong { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.author-note { font-size: 12px; color: var(--primary); font-weight: 600; margin: -2px 0 5px; }
 .pub-venue { font-size: 14px; color: var(--mute); font-style: italic; margin-bottom: 12px; }
 
 /* 按钮样式 - 参考截图 ABS/BIB/HTML/PDF */
@@ -209,6 +210,33 @@ nav a:hover { background: #f1f2f6; color: var(--primary); }
 .ptag-conf   { color: #22577a; background: #eef6ff; border-color: #d5e8ff; }
 .ptag-q1     { color: #2b9348; background: #eefbf1; border-color: #d4f4dc; }
 
+/* Community service */
+.service-list { display: grid; gap: 14px; }
+.service-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+.service-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f1efff;
+  font-size: 20px;
+}
+.service-body h3 { font-size: 17px; margin-bottom: 4px; }
+.service-body p { color: var(--mute); font-size: 15px; }
+.service-body a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.service-body a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
 /* ── Contact 区域 ── */
 #contact {
   margin-top: 60px;
@@ -250,11 +278,14 @@ nav a:hover { background: #f1f2f6; color: var(--primary); }
 footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: var(--mute); text-align: center; font-size: 14px; }
 
 @media (max-width: 700px) {
+  nav { justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+  nav a { padding: 5px 9px; font-size: 14px; }
   .hero { flex-direction: column; text-align: center; }
   .pub-card { flex-direction: column; }
   .pub-thumb { width: 100%; }
   .pub-item { flex-direction: column; }
   .pub-item .pub-thumb { width: 100%; }
+  .service-item { padding: 16px; }
 }
 /* 放大背景层 */
 .image-modal {
@@ -291,6 +322,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <a href="#home">Home</a>
     <a href="#news">News</a>
     <a href="#publications">Publications</a>
+    <a href="#service">Service</a>
     <a href="mailto:zanxi.ruan@univr.it" class="contact-email">Contact</a>
   </nav>
 
@@ -307,8 +339,8 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
         <a href="https://scholar.google.com/citations?user=LbgTPRwAAAAJ" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Prof. Marco Cristani</a> 
         and 
         <a href="https://www.yimingwang.me/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Dr. Yiming Wang</a>. <br><br>
-        My research hearts 🤍 lie in <strong>multimodal learning</strong> and <strong>information imbalance</strong> in large model training. 
-        Previously, I earned my M.Sc. from NUDT and B.Sc. (Ranked 1st/70) from NCUT. 
+        My research focuses on multimodal representation learning, particularly the geometry, alignment, and biases of vision-language representations. I am also interested in building robust and transferable representations for multimodal and embodied intelligence.
+        Previously, I earned my Master's degree from the National University of Defense Technology 🇨🇳 and Bachelor's degree (Ranked 1st/70) from North China University of Technology 🇨🇳.
       </p>
 <div class="links">
   <a href="https://scholar.google.com/citations?user=7AvfV7gAAAAJ&hl=en"
@@ -327,14 +359,44 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
   <section id="news">
     <h2 class="section-title">News</h2>
     <ul class="news-list">
+
+      <li class="news-item">
+        <span class="news-date">Sep, 2026</span>
+        <span class="news-content">
+          I have just submitted my first theory-oriented work to <strong>ICLR 2027</strong>. Fingers crossed!
+        </span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Sep, 2026</span>
+        <span class="news-content">
+          🎉 Our follow-up to StructXLIP, <strong>Mitigating Saliency Collapse: Robust Saliency-Aware Long-Text Image-Text Alignment</strong>, has been accepted to <strong>NeurIPS 2026</strong>! More details are coming soon.
+        </span>
+      </li>
+            <li class="news-item">
+        <span class="news-date">Aug, 2026</span>
+        <span class="news-content">
+          🤝 I am delighted to be co-organizing the <a href="https://human-ai-co-creation.github.io/workshop/" target="_blank" class="news-paper-link"><strong>Human-AI Co-Creation Workshop</strong></a> at <strong>ECCV 2026</strong>. I have been deeply involved in shaping the workshop, and warmly invite everyone to follow our work!
+        </span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Jun, 2026</span>
+        <span class="news-content">
+          🏆 StructXLIP received the <strong>CVPR Compute Transparency Champion</strong> award, recognizing our high-quality anonymized Weights &amp; Biases logs and complete compute reporting.
+        </span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">May, 2026</span>
+        <span class="news-content">
+          🎉 One paperhas been accepted to <strong>ICIP 2026</strong>!
+        </span>
+      </li>
 <li class="news-item">
       <span class="news-date">Feb 21, 2026</span>
        <span class="news-content">
-          🎉 Thrilled to share that our latest work 
+          🎉 Thrilled to share that our work
           <a href="https://eveleslie.github.io/structxlip-web/" target="_blank" class="news-paper-link">
             <strong style="font-size: 1.1em; letter-spacing: -0.02em;">
-              <span style="color: #2a5c8a;">Struct</span><span style="color: #e056fd;">XLIP</span>: 
-              Enhancing Vision-Language Models with Multimodal Structural Cues
+              <span style="color: #2a5c8a;">Struct</span><span style="color: #e056fd;">XLIP</span>
             </strong>
           </a>
           has been accepted to <strong>CVPR 2026</strong>! 
@@ -366,6 +428,42 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
 <div class="sec" id="publications">
   <div class="sec-hd"><h2>Selected Publications</h2></div>
   <div class="pub-list">
+    <!-- NeurIPS 2026 -->
+    <div class="pub-item">
+      <div class="pub-thumb">
+        <img src="images/rosa.png" alt="Mitigating Saliency Collapse">
+      </div>
+      <div class="pub-body">
+        <div class="pub-title">Mitigating Saliency Collapse: Robust Saliency-Aware Long-Text Image-Text Alignment</div>
+        <div class="pub-authors">Q. Kong, <strong>Z. Ruan<sup>*</sup></strong>, M. Cristani, Y. Wang</div>
+        <div class="author-note"><sup>*</sup> Corresponding author</div>
+        <div class="pub-venue"><span class="conf">NeurIPS 2026</span> — In Proceedings of Neural Information Processing Systems (NeurIPS), 2026</div>
+        <div class="pub-tags">
+          <span class="ptag ptag-conf">NeurIPS</span>
+          <span class="ptag ptag-accept">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ICIP 2026 -->
+    <div class="pub-item">
+      <div class="pub-thumb">
+        <img src="images/sam3.png" alt="SAM3 pathology segmentation results">
+      </div>
+      <div class="pub-body">
+        <div class="pub-title">Is SAM3 ready for pathology segmentation?</div>
+        <div class="pub-authors">Q. Kong, S. Sharifi, Y. Wang, M. Cristani, <strong>Z. Ruan<sup>*</sup></strong></div>
+        <div class="author-note"><sup>*</sup> Corresponding author</div>
+        <div class="pub-venue"><span class="conf">ICIP 2026</span> — IEEE International Conference on Image Processing</div>
+        <div class="pub-tags">
+          <span class="ptag ptag-conf">ICIP</span>
+        </div>
+        <div class="pub-btns">
+          <a href="https://arxiv.org/abs/2604.18225" target="_blank" class="btn">PDF</a>
+        </div>
+      </div>
+    </div>
+
         <!-- CVPR 2026 -->
     <div class="pub-item">
 <div class="pub-thumb">
@@ -394,7 +492,8 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
 </div>
       <div class="pub-body">
         <div class="pub-title">Learning to Solve Orienteering Problem with Time Windows and Variable Profits</div>
-        <div class="pub-authors">S. Gao, <strong>Z. Ruan</strong>, P. Floor, M. Roveri, L. Palopoli, D. Fontanelli</div>
+        <div class="pub-authors">S. Gao, <strong>Z. Ruan<sup>*</sup></strong>, P. Floor, M. Roveri, L. Palopoli, D. Fontanelli</div>
+        <div class="author-note"><sup>*</sup> Corresponding author</div>
         <div class="pub-venue"><span class="conf">ICLR 2026</span> — The Fourteenth International Conference on Learning Representations</div>
         <div class="pub-tags">
           <span class="ptag ptag-conf">ICLR</span>
@@ -493,8 +592,30 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
 
   </div>
 </div>
+
+<!-- COMMUNITY SERVICE -->
+<section class="sec" id="service">
+  <div class="sec-hd"><h2>Community Service</h2></div>
+  <div class="service-list">
+    <div class="service-item">
+      <div class="service-icon" aria-hidden="true">🤝</div>
+      <div class="service-body">
+        <h3>Workshop Organization</h3>
+        <p>Co-organizer of the <a href="https://human-ai-co-creation.github.io/workshop/" target="_blank">Human-AI Co-Creation Workshop</a> at ECCV 2026.</p>
+      </div>
+    </div>
+    <div class="service-item">
+      <div class="service-icon" aria-hidden="true">📝</div>
+      <div class="service-body">
+        <h3>Peer Review</h3>
+        <p>Reviewer for ICCV, CVPR, ACM Multimedia (ACM MM), ICLR, and IEEE Transactions on Multimedia (TMM).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <footer>
-    <p>Last updated: Feb 2026.</p>
+    <p>Last updated: Sep 2026.</p>
   </footer>
 </div>
 <div class="image-modal" id="imageModal">
