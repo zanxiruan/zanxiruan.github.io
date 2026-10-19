@@ -6,7 +6,6 @@
 <title>Zanxi Ruan | 阮瓒茜</title>
 
 <link rel="icon" href="images/zr-logo.png" type="image/png">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --primary: #6c5ce7; /* 柔和的紫色 */
@@ -314,47 +313,101 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
   to   { opacity: 1; transform: scale(1); }
 }
 </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
-    <a href="#service">Service</a>
-    <a href="mailto:zanxi.ruan@univr.it" class="contact-email">Contact</a>
-  </nav>
-
-  <div class="hero" id="home">
-<div class="avatar-wrap">
-  <img src="images/zanxi-id.png" class="avatar" alt="Zanxi Ruan">
-</div>
-    <div class="hero-info">
-      <h1>Zanxi Ruan</h1>
-      <div class="chinese">阮瓒茜</div>
-<p class="bio">
-        Hi, I am Zanxi! I'm a 2nd year PhD Candidate at <strong>University of Verona</strong> 🇮🇹 <br>
-        I am incredibly lucky to be supervised by 
-        <a href="https://scholar.google.com/citations?user=LbgTPRwAAAAJ" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Prof. Marco Cristani</a> 
-        and 
-        <a href="https://www.yimingwang.me/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Dr. Yiming Wang</a>. <br><br>
-        My research focuses on multimodal representation learning, particularly the geometry, alignment, and biases of vision-language representations. I am also interested in building robust and transferable representations for multimodal and embodied intelligence.
-        Previously, I earned my Master's degree from the National University of Defense Technology 🇨🇳 and Bachelor's degree (Ranked 1st/70) from North China University of Technology 🇨🇳.
-      </p>
-<div class="links">
-  <a href="https://scholar.google.com/citations?user=7AvfV7gAAAAJ&hl=en"
-     target="_blank" rel="noopener noreferrer">
-     Google Scholar
-  </a>
-
-  <a href="https://github.com/eveleslie?tab=repositories"
-     target="_blank" rel="noopener noreferrer">
-     GitHub
-  </a>
-</div>
+<header class="site-header">
+  <nav aria-label="Primary navigation">
+    <a class="site-name" href="#home">Zanxi Ruan</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#service">Service</a>
     </div>
-  </div>
+  </nav>
+</header>
+
+<div class="page-shell">
+  <aside class="profile" id="home" aria-label="Profile">
+    <img src="images/zanxi-id.png" class="avatar" alt="Portrait of Zanxi Ruan">
+    <div class="profile-name">
+      <h1>Zanxi Ruan</h1>
+      <p class="chinese">阮瓒茜</p>
+    </div>
+    <p class="profile-role">PhD Candidate</p>
+    <p class="profile-affiliation">University of Verona</p>
+    <p class="profile-location">Verona, Italy</p>
+
+    <div class="profile-links" aria-label="Contact and academic profiles">
+      <a href="mailto:zanxi.ruan@univr.it">Email</a>
+      <a href="https://scholar.google.com/citations?user=7AvfV7gAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      <a href="https://github.com/eveleslie?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+
+    <section class="visitor-card" aria-labelledby="visitor-title">
+      <div class="visitor-heading">
+        <h2 id="visitor-title">Visitor globe</h2>
+        <span id="visitorTotal">Loading…</span>
+      </div>
+      <svg class="visitor-map" viewBox="0 0 240 126" role="img" aria-label="Approximate locations of visitors by country">
+        <defs>
+          <clipPath id="globeClip"><ellipse cx="120" cy="63" rx="112" ry="56"/></clipPath>
+        </defs>
+        <ellipse class="globe-ocean" cx="120" cy="63" rx="112" ry="56"/>
+        <g class="globe-grid" clip-path="url(#globeClip)">
+          <ellipse cx="120" cy="63" rx="55" ry="56"/>
+          <ellipse cx="120" cy="63" rx="88" ry="56"/>
+          <path d="M8 63h224M20 39h200M20 87h200"/>
+        </g>
+        <g class="globe-land" clip-path="url(#globeClip)">
+          <path d="M25 41l12-13 21-7 20 6 5 10-10 7-8 13-12 3-6 15-9-3-3-17z"/>
+          <path d="M67 70l12 5 7 14-7 25-8 6-4-19-8-18z"/>
+          <path d="M105 34l13-8 20 1 9 8 15-2 17 8 22 4 15 12-6 11-20-2-7 9-15-6-8-14-12 2-8 13-13-5-10-13-16-4z"/>
+          <path d="M131 69l17 3 9 13-7 25-13 8-9-18-7-18z"/>
+          <path d="M190 91l15-7 14 7-4 13-17 2z"/>
+        </g>
+        <g id="visitorMarkers" clip-path="url(#globeClip)"></g>
+      </svg>
+      <p id="visitorNote" class="visitor-note">Anonymous country-level count</p>
+    </section>
+  </aside>
+
+  <main class="content">
+    <section id="about" class="about-section">
+      <h2 class="section-title">About me</h2>
+      <p class="visit-opportunity">
+        <span class="visit-label">Academic visit</span>
+        I am currently seeking a <strong>3–6 month academic visiting opportunity</strong>, with funding fully covered by my <strong>PhD programme in Italy</strong>.
+      </p>
+      <p>
+        Hi, I am Zanxi. I am a second-year PhD candidate at the <strong>University of Verona</strong>, supervised by
+        <a href="https://scholar.google.com/citations?user=LbgTPRwAAAAJ" target="_blank" rel="noopener noreferrer">Prof. Marco Cristani</a>
+        and <a href="https://www.yimingwang.me/" target="_blank" rel="noopener noreferrer">Dr. Yiming Wang</a>.
+      </p>
+      <p>
+        My research focuses on multimodal representation learning, particularly the geometry, alignment, and biases of vision-language representations. I am particularly interested in extending this work toward embodied intelligence, with a focus on robust perception, multimodal reasoning, and transferable representations for interactive agents.
+      </p>
+      <p>
+        Previously, I earned my Master's degree from the National University of Defense Technology and my Bachelor's degree, ranked 1st of 70, from North China University of Technology.
+      </p>
+      <div class="research-tags" aria-label="Research interests">
+        <span>Multimodal learning</span>
+        <span>Vision–language alignment</span>
+        <span>Embodied intelligence</span>
+      </div>
+      <div class="about-personal">
+        <p class="work-note">
+          <span class="about-note-title"><span aria-hidden="true">🌱</span> How I work</span>
+          I bring a positive and hard-working attitude to research and genuinely value every opportunity I receive. I have extensive experience collaborating in research teams and enjoy sharing ideas, taking responsibility, and growing together with others.
+        </p>
+        <p class="hobby-note">
+          <span class="about-note-title"><span aria-hidden="true">🎨</span> My hobbies</span>
+          I enjoy drawing and playing tennis <span aria-hidden="true">🎾</span>.
+        </p>
+      </div>
+    </section>
 
   <section id="news">
     <h2 class="section-title">News</h2>
@@ -369,38 +422,37 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
       <li class="news-item">
         <span class="news-date">Sep, 2026</span>
         <span class="news-content">
-          🎉 Our follow-up to StructXLIP, <strong>Mitigating Saliency Collapse: Robust Saliency-Aware Long-Text Image-Text Alignment</strong>, has been accepted to <strong>NeurIPS 2026</strong>! More details are coming soon.
+          Our follow-up to StructXLIP, <strong>Mitigating Saliency Collapse: Robust Saliency-Aware Long-Text Image-Text Alignment</strong>, has been accepted to <strong>NeurIPS 2026</strong>. More details are coming soon.
         </span>
       </li>
             <li class="news-item">
         <span class="news-date">Aug, 2026</span>
         <span class="news-content">
-          🤝 I am delighted to be co-organizing the <a href="https://human-ai-co-creation.github.io/workshop/" target="_blank" class="news-paper-link"><strong>Human-AI Co-Creation Workshop</strong></a> at <strong>ECCV 2026</strong>. I have been deeply involved in shaping the workshop, and warmly invite everyone to follow our work!
+          I am delighted to be co-organizing the <a href="https://human-ai-co-creation.github.io/workshop/" target="_blank" class="news-paper-link"><strong>Human-AI Co-Creation Workshop</strong></a> at <strong>ECCV 2026</strong>.
         </span>
       </li>
       <li class="news-item">
         <span class="news-date">Jun, 2026</span>
         <span class="news-content">
-          🏆 StructXLIP received the <strong>CVPR Compute Transparency Champion</strong> award, recognizing our high-quality anonymized Weights &amp; Biases logs and complete compute reporting.
+          StructXLIP received the <strong>CVPR Compute Transparency Champion</strong> award, recognizing our high-quality anonymized Weights &amp; Biases logs and complete compute reporting.
         </span>
       </li>
       <li class="news-item">
         <span class="news-date">May, 2026</span>
         <span class="news-content">
-          🎉 One paperhas been accepted to <strong>ICIP 2026</strong>!
+          One paper has been accepted to <strong>ICIP 2026</strong>.
         </span>
       </li>
 <li class="news-item">
       <span class="news-date">Feb 21, 2026</span>
        <span class="news-content">
-          🎉 Thrilled to share that our work
+          Our work
           <a href="https://eveleslie.github.io/structxlip-web/" target="_blank" class="news-paper-link">
             <strong style="font-size: 1.1em; letter-spacing: -0.02em;">
               <span style="color: #2a5c8a;">Struct</span><span style="color: #e056fd;">XLIP</span>
             </strong>
           </a>
-          has been accepted to <strong>CVPR 2026</strong>! 
-          Huge thanks to my shero and hero 
+          has been accepted to <strong>CVPR 2026</strong>. Thanks to
           <a href="https://www.yimingwang.me/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Yiming</a> and 
           <a href="https://scholar.google.com/citations?user=LbgTPRwAAAAJ" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">Marco</a>. 
           
@@ -408,16 +460,16 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     </li>
       <li class="news-item">
         <span class="news-date">Feb, 2026</span>
-         <span class="news-content">🎉 One Paper accepted at <strong>ICLR 2026</strong></span>
+         <span class="news-content">One paper accepted at <strong>ICLR 2026</strong>.</span>
       </li>
       <li class="news-item">
         <span class="news-date">Jun, 2025</span>
-         <span class="news-content">🎉 One Paper accepted at <strong>ICCV 2025</strong></span>
+         <span class="news-content">One paper accepted at <strong>ICCV 2025</strong>.</span>
       </li>
       <li class="news-item">
   <span class="news-date">Jun, 2025</span>
   <span class="news-content">
-    🎉 My final master's research "<strong>Few-shot event-based action recognition</strong>" has been accepted by <strong>Neural Networks</strong>! 
+    My final master's research, "<strong>Few-shot event-based action recognition</strong>", has been accepted by <strong>Neural Networks</strong>.
     This work marks a nice conclusion to my M.Sc. journey. 
   </span>
 </li>
@@ -431,6 +483,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <!-- NeurIPS 2026 -->
     <div class="pub-item">
       <div class="pub-thumb">
+        <span class="venue-badge"><strong>NeurIPS</strong><span>2026</span></span>
         <img src="images/rosa.png" alt="Mitigating Saliency Collapse">
       </div>
       <div class="pub-body">
@@ -442,12 +495,16 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
           <span class="ptag ptag-conf">NeurIPS</span>
           <span class="ptag ptag-accept">Coming Soon</span>
         </div>
+        <div class="pub-btns">
+          <a href="https://neurips.cc/virtual/2026/loc/paris/poster/155555" target="_blank" rel="noopener noreferrer" class="btn">HTML</a>
+        </div>
       </div>
     </div>
 
     <!-- ICIP 2026 -->
     <div class="pub-item">
       <div class="pub-thumb">
+        <span class="venue-badge"><strong>ICIP</strong><span>2026</span></span>
         <img src="images/sam3.png" alt="SAM3 pathology segmentation results">
       </div>
       <div class="pub-body">
@@ -467,7 +524,8 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
         <!-- CVPR 2026 -->
     <div class="pub-item">
 <div class="pub-thumb">
-  <img src="images/struxlip-main.png" alt="Decost">
+  <span class="venue-badge"><strong>CVPR</strong><span>2026</span></span>
+  <img src="images/struxlip-main.png" alt="StructXLIP method overview">
 </div>
       <div class="pub-body">
         <div class="pub-title">StructXLIP: Enhancing Vision-Language Models with Multimodal Structural Cues</div>
@@ -488,6 +546,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <!-- ICLR 2026 -->
     <div class="pub-item">
 <div class="pub-thumb">
+  <span class="venue-badge"><strong>ICLR</strong><span>2026</span></span>
   <img src="images/DECOST.png" alt="Decost">
 </div>
       <div class="pub-body">
@@ -510,6 +569,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <!-- CVPR 2026 -->
     <div class="pub-item">
 <div class="pub-thumb">
+  <span class="venue-badge venue-badge-oral"><strong>ICCV</strong><span>2025 · Oral</span></span>
   <img src="images/lost.png" alt="LOTS of Fashion">
 </div>
       <div class="pub-body">
@@ -531,6 +591,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <!-- Neural Networks 2025 -->
     <div class="pub-item">
 <div class="pub-thumb">
+  <span class="venue-badge venue-badge-journal"><strong>Neural Networks</strong><span>2025</span></span>
   <img src="images/event-based.jpg" alt="Few-shot Event-based Action Recognition">
 </div>
       <div class="pub-body">
@@ -551,6 +612,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
     <!-- ACM MM 2024 -->
     <div class="pub-item">
 <div class="pub-thumb">
+  <span class="venue-badge"><strong>ACM MM</strong><span>2024</span></span>
   <img src="images/dual.png" alt="Dual-branch Fusion">
 </div>
       <div class="pub-body">
@@ -570,11 +632,10 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
 
     <!-- Complex & Intelligent Systems 2024 -->
     <div class="pub-item">
-      <div class="pub-thumb">
 <div class="pub-thumb">
+  <span class="venue-badge venue-badge-journal"><strong>C&amp;IS</strong><span>2024</span></span>
   <img src="images/hybrid.webp" alt="Hybrid Attentive Prototypical Network">
 </div>
-      </div>
       <div class="pub-body">
         <div class="pub-title">Hybrid Attentive Prototypical Network for Few-shot Action Recognition</div>
         <div class="pub-authors"><strong>Z. Ruan</strong>, Y. Wei, Y. Guo, Y. Xie</div>
@@ -585,7 +646,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
         <div class="pub-btns">
           <a href="#" class="pbtn">ABS</a>
           <a href="#" class="pbtn">BIB</a>
-          <a href="https://link.springer.com/article/10.1007/s40747-024-01571-4" target="_blank"class="pbtn">PDF</a>
+          <a href="https://link.springer.com/article/10.1007/s40747-024-01571-4" target="_blank" class="pbtn">PDF</a>
         </div>
       </div>
     </div>
@@ -598,17 +659,30 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
   <div class="sec-hd"><h2>Community Service</h2></div>
   <div class="service-list">
     <div class="service-item">
-      <div class="service-icon" aria-hidden="true">🤝</div>
       <div class="service-body">
         <h3>Workshop Organization</h3>
         <p>Co-organizer of the <a href="https://human-ai-co-creation.github.io/workshop/" target="_blank">Human-AI Co-Creation Workshop</a> at ECCV 2026.</p>
       </div>
     </div>
     <div class="service-item">
-      <div class="service-icon" aria-hidden="true">📝</div>
       <div class="service-body">
         <h3>Peer Review</h3>
         <p>Reviewer for ICCV, CVPR, ACM Multimedia (ACM MM), ICLR, and IEEE Transactions on Multimedia (TMM).</p>
+      </div>
+    </div>
+    <div class="service-item service-item-recognition">
+      <div class="service-body">
+        <h3>Reviewer Recognition</h3>
+        <ul class="recognition-list">
+          <li>
+            <span class="recognition-year">2026</span>
+            <span><strong>Top Reviewer</strong><small>NeurIPS</small></span>
+          </li>
+          <li>
+            <span class="recognition-year">2025</span>
+            <span><strong>Outstanding Reviewer</strong><small>ACM Multimedia (ACM MM)</small></span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -617,6 +691,7 @@ footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: v
   <footer>
     <p>Last updated: Sep 2026.</p>
   </footer>
+</main>
 </div>
 <div class="image-modal" id="imageModal">
   <img id="modalImg">
@@ -812,6 +887,130 @@ document.querySelectorAll(".pub-thumb img").forEach(img => {
 modal.addEventListener("click", function () {
   modal.style.display = "none";
 });
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") modal.style.display = "none";
+});
+</script>
+<script>
+(function () {
+  const totalEl = document.getElementById('visitorTotal');
+  const noteEl = document.getElementById('visitorNote');
+  const markersEl = document.getElementById('visitorMarkers');
+  if (!totalEl || !noteEl || !markersEl) return;
+
+  const counterBase = 'https://countapi.mileshilliard.com/api/v1';
+  const siteKey = 'zanxiruan_github_io';
+  const isLiveSite = /(^|\.)zanxiruan\.github\.io$/i.test(location.hostname);
+  const countryPoints = {
+    IT: [122, 55], CN: [172, 60], US: [49, 55], GB: [112, 43],
+    DE: [122, 47], FR: [116, 51], NL: [119, 44], CH: [119, 51],
+    ES: [113, 57], CA: [43, 38], SG: [180, 84], JP: [204, 61],
+    KR: [195, 62], AU: [202, 98], IN: [160, 73], BR: [73, 89]
+  };
+
+  function fetchJSON(url) {
+    return fetch(url, { mode: 'cors', cache: 'no-store' }).then(function (response) {
+      if (!response.ok) throw new Error('Request failed');
+      return response.json();
+    });
+  }
+
+  function countryName(code) {
+    try {
+      return new Intl.DisplayNames(['en'], { type: 'region' }).of(code) || code;
+    } catch (_) {
+      return code;
+    }
+  }
+
+  function drawMarker(code, count, currentCode) {
+    const point = countryPoints[code];
+    if (!point || !count) return;
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    const title = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+    circle.setAttribute('cx', point[0]);
+    circle.setAttribute('cy', point[1]);
+    circle.setAttribute('r', Math.min(6, 2.2 + Math.log2(count + 1) * 0.72));
+    circle.setAttribute('class', 'visitor-marker' + (code === currentCode ? ' current' : ''));
+    title.textContent = countryName(code) + ': ' + count;
+    circle.appendChild(title);
+    markersEl.appendChild(circle);
+  }
+
+  async function loadMarkers(currentCode) {
+    const codes = Object.keys(countryPoints);
+    const results = await Promise.all(codes.map(function (code) {
+      return fetchJSON(counterBase + '/get/' + siteKey + '_country_' + code.toLowerCase())
+        .then(function (data) { return [code, Number(data.value) || 0]; })
+        .catch(function () { return [code, 0]; });
+    }));
+    results.forEach(function (entry) { drawMarker(entry[0], entry[1], currentCode); });
+  }
+
+  async function initVisitorGlobe() {
+    let currentCode = '';
+    let alreadyCounted = false;
+    try { alreadyCounted = sessionStorage.getItem('zr-visit-counted') === '1'; } catch (_) {}
+
+    try {
+      if (isLiveSite) {
+        const locationData = await fetchJSON('https://api.country.is/').catch(function () { return {}; });
+        currentCode = String(locationData.country || '').toUpperCase();
+
+        if (!alreadyCounted) {
+          const requests = [fetchJSON(counterBase + '/hit/' + siteKey + '_visits')];
+          if (currentCode) requests.push(fetchJSON(counterBase + '/hit/' + siteKey + '_country_' + currentCode.toLowerCase()));
+          const values = await Promise.all(requests);
+          const totalValue = Number(values[0].value) || 0;
+          totalEl.textContent = totalValue.toLocaleString() + (totalValue === 1 ? ' visit' : ' visits');
+          try { sessionStorage.setItem('zr-visit-counted', '1'); } catch (_) {}
+        } else {
+          const total = await fetchJSON(counterBase + '/get/' + siteKey + '_visits');
+          const totalValue = Number(total.value) || 0;
+          totalEl.textContent = totalValue.toLocaleString() + (totalValue === 1 ? ' visit' : ' visits');
+        }
+
+        noteEl.textContent = currentCode
+          ? 'This visit · ' + countryName(currentCode) + ' · country-level only'
+          : 'Anonymous country-level count';
+      } else {
+        const total = await fetchJSON(counterBase + '/get/' + siteKey + '_visits');
+        const totalValue = Number(total.value) || 0;
+        totalEl.textContent = totalValue.toLocaleString() + (totalValue === 1 ? ' visit' : ' visits');
+        noteEl.textContent = 'Preview mode · visits are not counted';
+      }
+
+      await loadMarkers(currentCode);
+    } catch (_) {
+      totalEl.textContent = 'Visitor map';
+      noteEl.textContent = 'Anonymous country-level count';
+    }
+  }
+
+  initVisitorGlobe();
+})();
+</script>
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+
+  const items = document.querySelectorAll('.content > section, .content > .sec, .visitor-card');
+  items.forEach(function (item, index) {
+    item.classList.add('reveal-item');
+    item.style.setProperty('--reveal-delay', Math.min(index * 55, 165) + 'ms');
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -34px' });
+
+  items.forEach(function (item) { observer.observe(item); });
+})();
 </script>
 </body>
 </html>
